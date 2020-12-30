@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_emergency">
+
+    <fragment
+        android:id="@+id/nav_emergency"
+        android:name="com.example.trial.emergencyFragment"
+        android:label="Emergency"
+        tools:layout="@layout/fragment_emergency">
+        <action
+            android:id="@+id/action_nav_emergency_to_nav_getHelp"
+            app:destination="@id/nav_getHelp" />
+        <action
+            android:id="@+id/action_nav_emergency_to_nav_reportCrime"
+            app:destination="@id/nav_reportCrime" />
+        <action
+            android:id="@+id/action_nav_emergency_to_nav_editProfile"
+            app:destination="@id/nav_editProfile" />
+        <action
+            android:id="@+id/action_nav_emergency_to_logOut"
+            app:destination="@id/nav_logOut" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_reportCrime"
+        android:name="com.example.trial.ReportCrimes"
+        android:label="Report A Crime"
+        tools:layout="@layout/fragment_report_crimes" />
+
+    <fragment
+        android:id="@+id/nav_getHelp"
+        android:name="com.example.trial.getHelp"
+        android:label="Get Help"
+        tools:layout="@layout/fragment_get_help" />
+
+    <fragment
+        android:id="@+id/nav_editProfile"
+        android:name="com.example.trial.editProfile"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/nav_logOut"
+        android:name="com.example.trial.logOut"
+        android:label="fragment_log_out"
+        tools:layout="@layout/fragment_log_out" />
+
+</navigation>
